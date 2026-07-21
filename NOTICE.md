@@ -8,7 +8,7 @@
 
 - The character appearance is based only on a reference image supplied and approved for this project by the repository owner.
 - No public-search image, sticker pack, brand asset, or downloaded third-party file is included in this repository.
-- The stored transparent cutout and all atlas, GIF, and preview files are deterministic local transformations of that approved source; no generative redraw is used.
+- The stored transparent cutout and all atlas, GIF, and preview files are local transformations of that approved source; no generative redraw is used.
 - The original full reference image is not redistributed in this repository.
 
 ## License scope
