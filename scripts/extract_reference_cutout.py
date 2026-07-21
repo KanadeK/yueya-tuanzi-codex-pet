@@ -34,6 +34,9 @@ def build_cutout(source: Path, output: Path) -> None:
     mask = mask.filter(ImageFilter.GaussianBlur(radius=1.2 * scale)).resize(
         image.size, Image.Resampling.LANCZOS
     )
+    # Contract the feathered edge by six pixels.  This removes the light
+    # source-background halo without changing the visible cat artwork.
+    mask = mask.filter(ImageFilter.MinFilter(size=13))
     result = image.copy()
     result.putalpha(mask)
     # The source background has saturated cyan accents.  They cannot belong to
