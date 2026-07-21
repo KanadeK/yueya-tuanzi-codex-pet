@@ -19,8 +19,8 @@ def test_package_is_valid() -> None:
 
 def test_metadata_uses_stable_identity() -> None:
     metadata = json.loads((ROOT / "pet" / "pet.json").read_text(encoding="utf-8"))
-    assert metadata["id"] == "yueya-tuanzi"
-    assert metadata["displayName"] == "月牙团子"
+    assert metadata["id"] == "miaocui-jiao-cat"
+    assert metadata["displayName"] == "妙脆角小猫"
     assert metadata["spriteVersionNumber"] == 2
 
 

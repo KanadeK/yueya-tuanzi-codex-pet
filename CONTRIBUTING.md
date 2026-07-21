@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve 月牙团子.
+Thanks for helping improve 妙脆角小猫.
 
 ## Before opening a pull request
 
@@ -8,7 +8,7 @@ Thanks for helping improve 月牙团子.
 2. Do not add scraped artwork, sticker packs, brand assets, or material without a documented compatible license.
 3. Run the asset build and validation commands from the README.
 4. Confirm every used sprite cell contains artwork and every unused cell is fully transparent.
-5. Keep the pet ID stable as `yueya-tuanzi`.
+5. Keep the pet ID stable as `miaocui-jiao-cat`.
 
 ## Contributor attribution
 

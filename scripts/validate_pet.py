@@ -42,10 +42,10 @@ def validate_pet(root: Path = ROOT) -> dict[str, Any]:
         errors.append(f"pet.json is missing keys: {sorted(missing)}")
     if extra:
         errors.append(f"pet.json has unsupported keys: {sorted(extra)}")
-    if metadata.get("id") != "yueya-tuanzi":
-        errors.append("pet.json id must be yueya-tuanzi")
-    if metadata.get("displayName") != "月牙团子":
-        errors.append("pet.json displayName must be 月牙团子")
+    if metadata.get("id") != "miaocui-jiao-cat":
+        errors.append("pet.json id must be miaocui-jiao-cat")
+    if metadata.get("displayName") != "妙脆角小猫":
+        errors.append("pet.json displayName must be 妙脆角小猫")
     if metadata.get("spritesheetPath") != "spritesheet.webp":
         errors.append("pet.json spritesheetPath must be spritesheet.webp")
     if metadata.get("spriteVersionNumber", 1) not in (1, 2):
@@ -104,7 +104,7 @@ def validate_pet(root: Path = ROOT) -> dict[str, Any]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Validate the Yueya Tuanzi Codex pet package")
+    parser = argparse.ArgumentParser(description="Validate the Miaocui Jiao Cat Codex pet package")
     parser.add_argument("--root", type=Path, default=ROOT)
     parser.add_argument("--json", action="store_true", dest="as_json")
     args = parser.parse_args()

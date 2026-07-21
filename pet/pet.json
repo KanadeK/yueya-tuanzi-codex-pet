@@ -1,7 +1,7 @@
 {
-  "id": "yueya-tuanzi",
-  "displayName": "月牙团子",
-  "description": "陪你在 Codex 里专注、等待、庆祝和验收成果的原创小猫助手。",
+  "id": "miaocui-jiao-cat",
+  "displayName": "妙脆角小猫",
+  "description": "以用户确认的妙脆角小猫原图制作的 Codex 桌面宠物。",
   "spriteVersionNumber": 2,
   "spritesheetPath": "spritesheet.webp"
 }

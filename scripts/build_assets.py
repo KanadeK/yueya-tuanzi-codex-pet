@@ -9,7 +9,7 @@ from PIL import Image, ImageOps
 
 
 ROOT = Path(__file__).resolve().parents[1]
-BOARD_PATH = ROOT / "artwork" / "generated" / "yueya-tuanzi-pose-board.png"
+CUTOUT_PATH = ROOT / "artwork" / "processed" / "miaocui-jiao-cat-cutout.png"
 ATLAS_PATH = ROOT / "pet" / "spritesheet.webp"
 MEDIA_DIR = ROOT / "media"
 ACTIONS_DIR = MEDIA_DIR / "actions"
@@ -188,45 +188,29 @@ def _clear_hidden_rgb(image: Image.Image) -> Image.Image:
     return cleaned
 
 
-def load_poses(path: Path = BOARD_PATH) -> list[Image.Image]:
-    board = Image.open(path).convert("RGBA")
-    if board.width % 3 or board.height % 3:
-        raise ValueError(f"Pose board must divide into a 3x3 grid: {board.size}")
+def load_poses(path: Path = CUTOUT_PATH) -> list[Image.Image]:
+    """Return one source-faithful pose for every native Codex state.
 
-    cell_width = board.width // 3
-    cell_height = board.height // 3
-    poses: list[Image.Image] = []
-
-    for index in range(9):
-        column = index % 3
-        row = index // 3
-        cell = board.crop(
-            (
-                column * cell_width,
-                row * cell_height,
-                (column + 1) * cell_width,
-                (row + 1) * cell_height,
-            )
+    The supplied reference is intentionally not redrawn or synthesized.  The
+    state animations below use only affine transforms of this cutout so the
+    recognizable character remains unchanged in every frame.
+    """
+    cutout = _clean_transparency(Image.open(path).convert("RGBA"))
+    alpha = cutout.getchannel("A")
+    bbox = alpha.point(lambda value: 255 if value > 16 else 0).getbbox()
+    if bbox is None:
+        raise ValueError("Reference cutout is empty")
+    left, top, right, bottom = bbox
+    padding = 4
+    pose = cutout.crop(
+        (
+            max(0, left - padding),
+            max(0, top - padding),
+            min(cutout.width, right + padding),
+            min(cutout.height, bottom + padding),
         )
-        cell = _clean_transparency(cell)
-        alpha = cell.getchannel("A")
-        bbox = alpha.point(lambda value: 255 if value > 16 else 0).getbbox()
-        if bbox is None:
-            raise ValueError(f"Pose {index} is empty")
-        left, top, right, bottom = bbox
-        padding = 4
-        poses.append(
-            cell.crop(
-                (
-                    max(0, left - padding),
-                    max(0, top - padding),
-                    min(cell.width, right + padding),
-                    min(cell.height, bottom + padding),
-                )
-            )
-        )
-
-    return poses
+    )
+    return [pose.copy() for _ in range(9)]
 
 
 def _fit_pose(pose: Image.Image, *, max_width: int = 178, max_height: int = 188) -> Image.Image:

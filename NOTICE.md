@@ -1,19 +1,19 @@
 # Notice
 
-## Original project
+## Project scope
 
-月牙团子 (Yueya Tuanzi) is an original, unofficial, non-commercial Codex Desktop pet project. It is not endorsed by, sponsored by, or affiliated with OpenAI or any third-party character, game, sticker, or media property.
+妙脆角小猫 is an unofficial, non-commercial Codex Desktop pet package. It is not endorsed by, sponsored by, or affiliated with OpenAI, KFC, or any third party.
 
 ## Artwork provenance
 
-- The user-supplied image was consulted only for broad intent: a cute small cat assistant. It is not included, redistributed, traced, or used as an edit target.
-- The pose board in this repository was newly generated from an original design brief: an orange-and-cream kitten with a crescent eyebrow patch, diamond-shaped amber eyes, a teal neckerchief with a bell, and a two-banded tail.
-- No third-party game files, official artwork, sticker packs, scraped images, character names, trademarks, or repository history are included.
-- Action frames, sprite atlas, GIF previews, and checksums are derived locally from the repository's original pose board and build scripts.
+- The character appearance is based only on a reference image supplied and approved for this project by the repository owner.
+- No public-search image, sticker pack, brand asset, or downloaded third-party file is included in this repository.
+- The stored transparent cutout and all atlas, GIF, and preview files are deterministic local transformations of that approved source; no generative redraw is used.
+- The original full reference image is not redistributed in this repository.
 
 ## License scope
 
-The MIT License covers the original code, documentation, and original artwork contributed to this repository. It does not grant rights to OpenAI trademarks or to any external material a user may independently add.
+The MIT License covers repository code, documentation, and project-specific transformations only to the extent the contributor owns them. It does not grant any right in external characters, trademarks, or source material outside this repository.
 
 ## Attribution or removal request
 

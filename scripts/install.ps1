@@ -1,11 +1,11 @@
 param(
-    [string]$Ref = $env:YUEYA_TUANZI_REF,
+    [string]$Ref = $env:MIAOCUI_JIAO_CAT_REF,
     [string]$SourceRoot = ""
 )
 
 $ErrorActionPreference = "Stop"
-$Repository = "KanadeK/yueya-tuanzi-codex-pet"
-$PetId = "yueya-tuanzi"
+$Repository = "KanadeK/miaocui-jiao-cat-codex-pet"
+$PetId = "miaocui-jiao-cat"
 
 if ([string]::IsNullOrWhiteSpace($Ref)) {
     $Ref = "main"
@@ -20,7 +20,7 @@ $codexRoot = if ([string]::IsNullOrWhiteSpace($env:CODEX_HOME)) {
 $petsRoot = Join-Path $codexRoot "pets"
 $target = Join-Path $petsRoot $PetId
 $backupRoot = Join-Path $codexRoot "pet-backups"
-$stage = Join-Path ([System.IO.Path]::GetTempPath()) ("yueya-tuanzi-" + [guid]::NewGuid().ToString("N"))
+$stage = Join-Path ([System.IO.Path]::GetTempPath()) ("miaocui-jiao-cat-" + [guid]::NewGuid().ToString("N"))
 $backupPath = $null
 
 function Assert-Checksum {
@@ -77,11 +77,11 @@ try {
     Copy-Item -LiteralPath $stagePetJson -Destination (Join-Path $target "pet.json")
     Copy-Item -LiteralPath $stageSpritesheet -Destination (Join-Path $target "spritesheet.webp")
 
-    Write-Host "Installed 月牙团子 to $target"
+    Write-Host "Installed 妙脆角小猫 to $target"
     if ($null -ne $backupPath) {
         Write-Host "Previous pet backup: $backupPath"
     }
-    Write-Host "Open Settings > Pets, choose Refresh, then select 月牙团子."
+    Write-Host "Open Settings > Pets, choose Refresh, then select 妙脆角小猫."
 } catch {
     if ($null -ne $backupPath -and -not (Test-Path -LiteralPath $target) -and (Test-Path -LiteralPath $backupPath)) {
         Move-Item -LiteralPath $backupPath -Destination $target

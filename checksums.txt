@@ -1,2 +1,2 @@
-0feef8ee423e3e09d32f10a783edacbafe94f2f63f072acd7dc6578c5a5e7689  pet/pet.json
-88bf88a966c75432fe8ddd613b8cbcdc4414056bd093a9bd2fa3769c3dce2bb9  pet/spritesheet.webp
+104f3b95f6913dc5a479b1b5ddaad65d825af9cd8353011ca67f615f945d809b  pet/pet.json
+a7f1104398f2e166eeec8d014b9eeabaef62bb4cd84d48d387c27f4f6de53381  pet/spritesheet.webp
