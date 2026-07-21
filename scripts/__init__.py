@@ -1,1 +1,1 @@
-"""Build and validation helpers for the Yuexin Miao Codex pet."""
+"""Build and validation helpers for the Yueya Tuanzi Codex pet."""

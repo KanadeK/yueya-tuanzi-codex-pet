@@ -2,7 +2,7 @@
 
 ## Original project
 
-月薪喵 (Yuexin Miao) is an original, unofficial, non-commercial Codex Desktop pet project. It is not endorsed by, sponsored by, or affiliated with OpenAI or any third-party character, game, sticker, or media property.
+月牙团子 (Yueya Tuanzi) is an original, unofficial, non-commercial Codex Desktop pet project. It is not endorsed by, sponsored by, or affiliated with OpenAI or any third-party character, game, sticker, or media property.
 
 ## Artwork provenance
 

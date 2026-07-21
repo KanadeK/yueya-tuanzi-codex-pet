@@ -1,14 +1,14 @@
 #!/usr/bin/env sh
 set -eu
 
-repository="${YUEXIN_MIAO_REPO:-KanadeK/yuexin-miao-codex-pet}"
-ref="${YUEXIN_MIAO_REF:-main}"
-pet_id="yuexin-miao"
+repository="${YUEYA_TUANZI_REPO:-KanadeK/yueya-tuanzi-codex-pet}"
+ref="${YUEYA_TUANZI_REF:-main}"
+pet_id="yueya-tuanzi"
 codex_root="${CODEX_HOME:-${HOME}/.codex}"
 pets_root="${codex_root}/pets"
 target="${pets_root}/${pet_id}"
 backup_root="${codex_root}/pet-backups"
-stage="$(mktemp -d "${TMPDIR:-/tmp}/yuexin-miao.XXXXXX")"
+stage="$(mktemp -d "${TMPDIR:-/tmp}/yueya-tuanzi.XXXXXX")"
 raw_root="https://raw.githubusercontent.com/${repository}/${ref}"
 
 cleanup() {
@@ -56,5 +56,5 @@ mkdir -p "${target}"
 cp "${stage}/pet.json" "${target}/pet.json"
 cp "${stage}/spritesheet.webp" "${target}/spritesheet.webp"
 
-echo "Installed 月薪喵 to ${target}"
-echo "Open Settings > Pets, choose Refresh, then select 月薪喵."
+echo "Installed 月牙团子 to ${target}"
+echo "Open Settings > Pets, choose Refresh, then select 月牙团子."

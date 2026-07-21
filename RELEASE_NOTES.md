@@ -1,4 +1,4 @@
-# 月薪喵 1.0.0
+# 月牙团子 1.0.0
 
 This first public release provides an original Codex Desktop pet package.
 

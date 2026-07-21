@@ -9,7 +9,7 @@ from PIL import Image, ImageOps
 
 
 ROOT = Path(__file__).resolve().parents[1]
-BOARD_PATH = ROOT / "artwork" / "generated" / "yuexin-miao-pose-board.png"
+BOARD_PATH = ROOT / "artwork" / "generated" / "yueya-tuanzi-pose-board.png"
 ATLAS_PATH = ROOT / "pet" / "spritesheet.webp"
 MEDIA_DIR = ROOT / "media"
 ACTIONS_DIR = MEDIA_DIR / "actions"
